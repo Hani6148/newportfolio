@@ -1,0 +1,355 @@
+
+html, body {
+    height: 100%;
+    font-family: 'Cabin Sketch', cursive;
+  }
+ .snap{
+     height: 750px;
+     overflow-y: scroll;
+     scroll-snap-type: y mandatory;
+     scroll-behavior: smooth;
+     
+ }
+
+.hani{
+    scroll-snap-align: start;
+    
+}
+.portfolio{
+    background-image: url("../images/p.jpg");
+    height: 753px;
+}
+
+
+.anchor{
+    position:fixed;
+    top:0px;
+    left: 0px;
+    background-color: #4C516D;
+    opacity: 0.95;
+    border-style: solid;
+    border-width: 1px;
+    height: 753px;
+    
+}
+
+.menu{
+
+    height: 250px;
+    border-bottom: solid,1px,black;
+    border-bottom: 2px solid white;
+    font-size: 150px;
+    text-align: center;
+    color: white;
+    margin-bottom: 0px;
+}
+
+.menu a{
+   background-color:inherit;
+   color: white;
+}
+#camera{
+    background-color: rgb(70, 152, 200);
+}
+
+.skills{
+    background-image: url("../images/s.png");
+    height: 753px;
+}
+
+.projects{
+    background-color: #ebebeb;
+    height: 753px;
+}
+
+
+
+.menutitle{
+    font-size: 31px;
+    position: relative;
+    top: -41px;
+    font-family: 'Cabin Sketch', cursive;
+    color: bisque;
+}
+
+
+.picture{
+    height: 755px;
+    background-image: url("../images/profile.jpg");
+    background-size: cover;
+    opacity: 1;
+    transition: 1s ease-in;
+}
+.about{
+    height: 755px;
+    background-color: #4C516D;
+    opacity: 0.9;
+    overflow-y: hidden;
+    text-align: center;
+}
+
+.next{
+    font-size: 50px;
+    opacity: 0.7;
+    position: relative;
+    top:40%;
+    left:90%;
+    color: white;
+}
+
+.previous{
+    font-size: 50px;
+    opacity: 0.7;
+    position: relative;
+    top:40%;
+    left:-11.5%;
+    color: white;
+}
+.picture i:hover,.about i:hover {
+opacity: 1;
+cursor: pointer;
+}
+.aboutpar{
+    margin-top: 0px;
+    text-align: justify;
+    padding: 20px;
+}
+.textdis{
+    font-family: 'Cabin Sketch', cursive;
+
+font-size: 40px;
+color:white ;
+animation: Typing 10s linear;
+overflow: hidden;
+}
+.aboutcont{
+    height: 550px;    
+    overflow: hidden;
+    border-top: solid 5px rgba(255,255,255,.07);
+    border-bottom:solid 5px rgba(255,255,255,.07) ;
+    border-radius: 10px;
+}
+
+  
+  @keyframes Typing {
+    0% {
+      height: 0;
+    }
+    100% {
+      height: 691px;
+    }
+  }
+  
+  .up, .down{
+    content: "\f139";
+    font-size: 50px;
+    position: relative;
+    color: white;
+    
+    opacity: 0.8;
+}
+
+.skillcont{
+    margin-bottom: 0px;
+    height: 100px;
+}
+.skillmenu{
+    background-color:transparent;
+    height:60px ;
+}
+
+.skilltype{
+    
+    height: inherit;
+    background-color: #d8ecfc;
+    margin-right: 15px;
+    border-radius: 15px;
+    margin-left: 20px;
+    font-family: 'Cabin Sketch', cursive;
+}
+
+.skilltypecont{
+    height: inherit;
+    
+}
+
+.skillenum{
+height: 329px;
+width: 400px;
+overflow-x:hidden;
+overflow-y: hidden;
+
+margin: auto;
+width: 750px;
+background-color: #d3e1eced;
+border-radius: 14px;
+}
+
+.skilldiv{
+    
+    display: inline-block;
+    width: 750px;
+    height:100%;
+
+   
+}
+
+.skillwrap{
+    position: relative;
+    left: 0px;
+    width:fit-content ;
+    height:inherit;
+    white-space: nowrap;
+   transition:ease-in-out 1s; 
+    
+    
+}
+.node{
+    padding: 0px;
+    background-image: url("../images/node.png");
+    transition: ease-in-out 0.2s;
+}
+
+.node:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.code{
+    background-color: rgb(70, 152, 200);
+    color: white;
+}
+.skilltype:hover{
+    cursor: pointer;
+}
+
+
+.cv{
+    width: 1266px;
+    height: inherit;
+    position: relative;
+    top: 0px;
+    left: 253px;
+    background-color: #ebebeb;
+    z-index: 555;
+    border-radius: 10px;
+    transition: ease-in-out 0.8s;
+
+}
+
+.cv:hover{
+   
+    cursor: pointer;
+    
+
+}
+
+.cvheader{
+    color: white;
+    border-radius: 10px;
+    height: 25%;
+    background-color: rgb(70, 152, 200);
+   
+}
+.cvheader:hover{
+    
+    background-color: rgb(187, 230, 255);
+    border-style: inset;
+    
+}
+
+.technical{
+    position: relative;
+    left: 612px;
+    color: darkgray;
+    animation:blinkingTextdown 1s infinite;
+
+
+
+}
+.gobackcv{
+    
+    color: white;
+    animation:blinkingTextup 1s infinite;
+}
+
+.projectinstance{
+    height: 500px;
+    
+    display: inline-block;
+    margin: 0px;
+    padding: 0px;
+    width: 84em;
+
+}
+
+.frame{
+    height: inherit;
+    width: 851px;
+}
+
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 17px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background-color:slategray;
+}
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+  .thumb{
+      cursor: pointer;
+      opacity: 0.5;
+  }
+  .thumb1{
+      opacity: 1;
+      border-style: ridge;
+  }
+
+  .projectwrap{
+      position: relative;
+      right: 0px;
+     
+      height: inherit;
+      width: fit-content;
+      transition:ease-in-out 1s; 
+  }
+  .prevthumb{
+      opacity: 0.3;
+      cursor: pointer;
+  }
+  .nextthumb{
+   cursor: pointer;
+  }
+
+
+@keyframes blinkingTextup{
+    0%{     color: white;    }
+   
+    100%{    color:transparent;  }
+    
+}
+@keyframes blinkingTextdown{
+    0%{     color: darkgray;    }
+   
+    100%{    color:transparent;  }
+    
+}
+
+
+.contact:hover{
+text-decoration: underline;
+}
