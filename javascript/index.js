@@ -109,7 +109,7 @@ $(".up").on("mousedown",function (){
             $(".up").css("visibility","visible")
             
         }
-        if(position.top<=-751.6000366210938){
+        if(position.top<=-1200.6000366210938){
             $(".down").css("visibility","hidden")
             clearInterval(intervalId);
         }
@@ -166,7 +166,7 @@ $(".technical").on("click",function (){
 
     
     
-    $(".cv").css("top","-755px")
+    $(".cvscroll").css("top","-755px")
     
 
 }
@@ -179,7 +179,7 @@ $(".gobackcv").on("click",function (){
 
     
     
-    $(".cv").css("top","0px")
+    $(".cvscroll").css("top","0px")
     
 
 }
@@ -252,7 +252,7 @@ $(".thumb4").on("click",function (){
 })
 $(".thumb5").on("click",function (){
   
-    $(".projectwrap").css("right","5050px")
+    $(".projectwrap").css("right","5060px")
     
     $(".thumb").css("opacity","0.5")
     $(".thumb5").css("opacity","1")
@@ -299,7 +299,7 @@ $(".nextthumb").on("click",function (){
     }
     else if ($(".projectwrap").css("right")=="3790px")
     {
-        $(".projectwrap").css("right","5050px")
+        $(".projectwrap").css("right","5060px")
     $(".thumb").css("opacity","0.5")
     $(".thumb5").css("opacity","1")
     $(".thumb").css("border-style","none")
@@ -314,7 +314,7 @@ $(".nextthumb").on("click",function (){
 
 $(".prevthumb").on("click",function (){
   
-    if($(".projectwrap").css("right")=="5050px")
+    if($(".projectwrap").css("right")=="5060px")
      {
          $(".projectwrap").css("right","3790px")
          $(".thumb").css("opacity","0.5")
@@ -357,3 +357,51 @@ $(".prevthumb").on("click",function (){
  
  })
 
+$(".proidcont").on("click",function (){
+    if( $(this).children(".prodisc").css("display")=="none"){
+    $(".proidcont").css("display","none")
+    $(this).css("display","block")
+    $(this).children(".prodisc").css("display","block")
+    $(window).scrollTop(1548);
+    }
+    else {
+    $(this).children(".prodisc").css("display","none")
+    $(".proidcont").css("display","block")
+    $(window).scrollTop(1570);
+}
+})
+
+$(".more").on("click",function(){
+    event.preventDefault()
+    if ($(this).attr("id")=="srsly"){
+    $(".overlay").css("visibility","visible")
+    $(".srsly").css("visibility","visible")
+    $(".srsly").css("opacity","1")}
+    else if ($(this).attr("id")=="philit") {
+        $(".overlay").css("visibility","visible")
+        $(".philit").css("visibility","visible")
+        $(".philit").css("opacity","1")
+    }
+    else if ($(this).attr("id")=="bookstore") {
+        $(".overlay").css("visibility","visible")
+        $(".bookstore").css("visibility","visible")
+        $(".bookstore").css("opacity","1")
+    }
+    else if ($(this).attr("id")=="trivia") {
+        $(".overlay").css("visibility","visible")
+        $(".trivia").css("visibility","visible")
+        $(".trivia").css("opacity","1")
+    }
+    else if ($(this).attr("id")=="eventbook") {
+        $(".overlay").css("visibility","visible")
+        $(".eventbook").css("visibility","visible")
+        $(".eventbook").css("opacity","1")
+    }
+    
+})
+$(".close").on("click",function(){
+    event.preventDefault()
+    $(".overlay").css("visibility","hidden")
+    $(".learnmore").css("visibility","hidden")
+    $(".learnmore").css("opacity","0")
+})

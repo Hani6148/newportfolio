@@ -1,8 +1,9 @@
 
 html, body {
     height: 100%;
-    font-family: 'Cabin Sketch', cursive;
-  }
+    background-color: #ebebeb;
+    font-family: 'Fredericka the Great', cursive;
+}
  .snap{
      height: 750px;
      overflow-y: scroll;
@@ -16,7 +17,7 @@ html, body {
     
 }
 .portfolio{
-    background-image: url("../images/p.jpg");
+    background-color: slategray;
     height: 753px;
 }
 
@@ -38,7 +39,7 @@ html, body {
     height: 250px;
     border-bottom: solid,1px,black;
     border-bottom: 2px solid white;
-    font-size: 150px;
+    font-size: 9vw;
     text-align: center;
     color: white;
     margin-bottom: 0px;
@@ -47,19 +48,24 @@ html, body {
 .menu a{
    background-color:inherit;
    color: white;
+   
 }
 #camera{
     background-color: rgb(70, 152, 200);
 }
 
 .skills{
-    background-image: url("../images/s.png");
+    background-color: #ebebeb;
     height: 753px;
+    font-family: 'Fredericka the Great', cursive;
+
 }
 
 .projects{
     background-color: #ebebeb;
     height: 753px;
+    font-family: 'Fredericka the Great', cursive;
+
 }
 
 
@@ -68,24 +74,27 @@ html, body {
     font-size: 31px;
     position: relative;
     top: -41px;
-    font-family: 'Cabin Sketch', cursive;
+    font-family: 'Fredericka the Great', cursive;
     color: bisque;
 }
 
 
 .picture{
     height: 755px;
-    background-image: url("../images/profile.jpg");
+    background-image: url("../images/profile2.jpg");
     background-size: cover;
+    background-position-x: center;
     opacity: 1;
     transition: 1s ease-in;
 }
 .about{
     height: 755px;
     background-color: #4C516D;
-    opacity: 0.9;
+    background-size: 100%;
+    opacity: 1;
     overflow-y: hidden;
     text-align: center;
+    background-image: url("../images/gray.png");
 }
 
 .next{
@@ -115,9 +124,9 @@ cursor: pointer;
     padding: 20px;
 }
 .textdis{
-    font-family: 'Cabin Sketch', cursive;
+    font-family: 'Fredericka the Great', cursive;
 
-font-size: 40px;
+font-size: 3vw;
 color:white ;
 animation: Typing 10s linear;
 overflow: hidden;
@@ -208,6 +217,7 @@ border-radius: 14px;
     padding: 0px;
     background-image: url("../images/node.png");
     transition: ease-in-out 0.2s;
+    background-size: 100%;
 }
 
 .node:hover{
@@ -223,17 +233,25 @@ border-radius: 14px;
     cursor: pointer;
 }
 
-
-.cv{
-    width: 1266px;
-    height: inherit;
+.cvscroll{
     position: relative;
     top: 0px;
-    left: 253px;
+    left: 0px;
+    transition: ease-in-out 0.8s;
+    overflow: hidden;
+    padding: 0px;
+}
+.cv{
+    margin-left: 0px;
+    margin-right: 0px;
+    height: 100vh;
+    position: relative;
+    top: 0px;
+    left: 0px;
     background-color: #ebebeb;
     z-index: 555;
-    border-radius: 10px;
-    transition: ease-in-out 0.8s;
+    
+    
 
 }
 
@@ -244,13 +262,91 @@ border-radius: 14px;
 
 }
 
-.cvheader{
-    color: white;
-    border-radius: 10px;
-    height: 25%;
-    background-color: rgb(70, 152, 200);
-   
+.overlay{
+    position: fixed;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+    background-color: darkgray;
+    opacity: 0.5;
+    visibility: hidden;
+    z-index: 10;
 }
+.srsly{
+    position: fixed;
+    top: 5%;
+    left: 10%;
+    height: 90%;
+    width: 80%;
+    background-color: white;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transition: linear 0.5s;
+}
+
+.learnmore{
+    position: fixed;
+    top: 5%;
+    left: 10%;
+    height: 90%;
+    width: 80%;
+    background-color: white;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transition: linear 0.5s;
+}
+
+.close{
+    position: absolute;
+    right: 5px;
+    top: 2px;
+    font-size: 50px;
+    color: darkslategray;
+
+}
+.close:hover{
+    cursor: pointer;
+}
+@media screen and (max-width: 768px){
+    .skills{
+        height: 365px;
+    }
+    .projects{
+        background-color: #9b9ca7;
+    }
+    .cvheader{
+        color: white;
+        border-radius: 10px;
+        height: 15%;
+        background-color: rgb(70, 152, 200);
+        
+    }
+    .textdis{
+        font-size: 4.2vw;
+
+    }
+    .snap{
+        scroll-snap-type: none;
+        scroll-behavior:auto
+    }
+}
+@media screen and (min-width: 769px){
+    .cvheader{
+        color: white;
+        border-radius: 10px;
+        height: 25%;
+        background-color: rgb(70, 152, 200);
+        
+    }
+    .skills{
+        background-image: url("../images/s.png");
+        height: 753px;
+    }
+}
+
+
 .cvheader:hover{
     
     background-color: rgb(187, 230, 255);
@@ -260,7 +356,7 @@ border-radius: 14px;
 
 .technical{
     position: relative;
-    left: 612px;
+    left: 50%;
     color: darkgray;
     animation:blinkingTextdown 1s infinite;
 
@@ -271,6 +367,9 @@ border-radius: 14px;
     
     color: white;
     animation:blinkingTextup 1s infinite;
+}
+.gobackcv:hover{
+cursor: pointer;
 }
 
 .projectinstance{
@@ -288,6 +387,9 @@ border-radius: 14px;
     width: 851px;
 }
 
+.proid{
+    height: 25vh;
+}
 
 
 /* width */
