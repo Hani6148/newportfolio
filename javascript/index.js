@@ -2,7 +2,8 @@ var images = ["./images/profile.jpg","./images/profile2.jpg"]
 var index = 0
 pos=0
 var position =  $(".textdis").offset()
-
+vh=$(window).height()
+console.log("vh=",vh)
 
 $(".snap").scroll(function(){
     var scrollPos = $(".snap").scrollTop();
@@ -11,11 +12,11 @@ $(".snap").scroll(function(){
         $(".menu").css("background-color","#4C516D")
         $("#camera").css("background-color","rgb(70, 152, 200)")
     }
-    else if (scrollPos==752.7999877929688){
+    else if (scrollPos>vh&&scrollPos<vh+10){
         $(".menu").css("background-color","#4C516D")
         $("#pencil").css("background-color","rgb(70, 152, 200)")
     }
-    else if (scrollPos==1505.5999755859375){
+    else if (scrollPos>vh*2){
         $(".menu").css("background-color","#4C516D")
         $("#rocket").css("background-color","rgb(70, 152, 200)")
     }
