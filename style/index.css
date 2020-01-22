@@ -1,11 +1,11 @@
 
 html, body {
-    height: 100%;
+    height: 100vh;
     background-color: #ebebeb;
     font-family: 'Fredericka the Great', cursive;
 }
  .snap{
-     height: 750px;
+     height: 100vh;
      overflow-y: scroll;
      scroll-snap-type: y mandatory;
      scroll-behavior: smooth;
@@ -18,7 +18,7 @@ html, body {
 }
 .portfolio{
     background-color: slategray;
-    height: 753px;
+    height:100vh;
 }
 
 
@@ -30,13 +30,13 @@ html, body {
     opacity: 0.95;
     border-style: solid;
     border-width: 1px;
-    height: 753px;
+    height: 100vh;
     
 }
 
 .menu{
 
-    height: 250px;
+    height: 33.33%;
     border-bottom: solid,1px,black;
     border-bottom: 2px solid white;
     font-size: 9vw;
@@ -56,14 +56,14 @@ html, body {
 
 .skills{
     background-color: #ebebeb;
-    height: 753px;
+    height: 100vh;
     font-family: 'Fredericka the Great', cursive;
 
 }
 
 .projects{
     background-color: #ebebeb;
-    height: 753px;
+    height: 100vh;
     font-family: 'Fredericka the Great', cursive;
 
 }
@@ -80,7 +80,7 @@ html, body {
 
 
 .picture{
-    height: 755px;
+    height: 100vh;
     background-image: url("../images/profile2.jpg");
     background-size: cover;
     background-position-x: center;
@@ -88,7 +88,7 @@ html, body {
     transition: 1s ease-in;
 }
 .about{
-    height: 755px;
+    height: 100vh;
     background-color: #4C516D;
     background-size: 100%;
     opacity: 1;
@@ -132,7 +132,7 @@ animation: Typing 10s linear;
 overflow: hidden;
 }
 .aboutcont{
-    height: 550px;    
+    height: 78%;    
     overflow: hidden;
     border-top: solid 5px rgba(255,255,255,.07);
     border-bottom:solid 5px rgba(255,255,255,.07) ;
@@ -240,6 +240,7 @@ border-radius: 14px;
     transition: ease-in-out 0.8s;
     overflow: hidden;
     padding: 0px;
+
 }
 .cv{
     margin-left: 0px;
@@ -342,7 +343,7 @@ border-radius: 14px;
     }
     .skills{
         background-image: url("../images/s.png");
-        height: 753px;
+        height: 100vh;
     }
 }
 
