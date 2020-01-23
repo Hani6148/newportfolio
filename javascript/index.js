@@ -6,17 +6,18 @@ vh=$(window).height()
 console.log("vh=",vh)
 
 $(".snap").scroll(function(){
+    
     var scrollPos = $(".snap").scrollTop();
     console.log(scrollPos);
     if(scrollPos==0){
         $(".menu").css("background-color","#4C516D")
         $("#camera").css("background-color","rgb(70, 152, 200)")
     }
-    else if (scrollPos>vh&&scrollPos<vh+10){
+    else if (scrollPos>=vh-10&&scrollPos<=vh+10){
         $(".menu").css("background-color","#4C516D")
         $("#pencil").css("background-color","rgb(70, 152, 200)")
     }
-    else if (scrollPos>vh*2){
+    else if (scrollPos>=vh*2-10&&scrollPos<=vh*2+10){
         $(".menu").css("background-color","#4C516D")
         $("#rocket").css("background-color","rgb(70, 152, 200)")
     }
