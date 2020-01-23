@@ -456,3 +456,10 @@ cursor: pointer;
 .contact:hover{
 text-decoration: underline;
 }
+
+@media screen and (max-height: 680px){
+.break{
+    display: none;
+}
+
+}
