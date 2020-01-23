@@ -168,7 +168,7 @@ $(".technical").on("click",function (){
 
     
     
-    $(".cvscroll").css("top","-755px")
+    $(".cvscroll").css("top","-"+vh+"px")
     
 
 }
