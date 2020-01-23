@@ -3,6 +3,9 @@ var index = 0
 pos=0
 var position =  $(".textdis").offset()
 vh=$(window).height()
+vw=$(window).width()
+push=vh*81.8/100
+console.log(push)
 console.log("vh=",vh)
 
 $(".snap").scroll(function(){
