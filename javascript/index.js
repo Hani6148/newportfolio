@@ -4,8 +4,13 @@ pos=0
 var position =  $(".textdis").offset()
 vh=$(window).height()
 vw=$(window).width()
-push=vh*81.8/100
-console.log(push)
+push=Math.round(vw*81.8/100+6)
+push1=push+"px"
+push2=push*2+"px"
+push3=push*3+"px"
+push4=push*4+"px"
+console.log("push2",push2)
+console.log("push",push)
 console.log("vh=",vh)
 
 $(".snap").scroll(function(){
@@ -213,7 +218,7 @@ $(".thumb1").on("click",function (){
 })
 $(".thumb2").on("click",function (){
   
-    $(".projectwrap").css("right","1262px")
+    $(".projectwrap").css("right",push1)
     $(".thumb").css("opacity","0.5")
     $(".thumb2").css("opacity","1")
     $(".thumb").css("border-style","none")
@@ -228,7 +233,7 @@ $(".thumb2").on("click",function (){
 })
 $(".thumb3").on("click",function (){
   
-    $(".projectwrap").css("right","2524px")
+    $(".projectwrap").css("right",push2)
     $(".thumb").css("opacity","0.5")
     $(".thumb3").css("opacity","1")
     $(".thumb").css("border-style","none")
@@ -242,7 +247,7 @@ $(".thumb3").on("click",function (){
 })
 $(".thumb4").on("click",function (){
   
-    $(".projectwrap").css("right","3790px")
+    $(".projectwrap").css("right",push3)
     $(".thumb").css("opacity","0.5")
     $(".thumb4").css("opacity","1")
     $(".thumb").css("border-style","none")
@@ -257,7 +262,7 @@ $(".thumb4").on("click",function (){
 })
 $(".thumb5").on("click",function (){
   
-    $(".projectwrap").css("right","5060px")
+    $(".projectwrap").css("right",push4)
     
     $(".thumb").css("opacity","0.5")
     $(".thumb5").css("opacity","1")
@@ -275,7 +280,8 @@ $(".nextthumb").on("click",function (){
   
    if($(".projectwrap").css("right")=="0px")
     {
-        $(".projectwrap").css("right","1262px")
+        $(".projectwrap").css("right",push1)
+        
         $(".thumb").css("opacity","0.5")
         $(".thumb2").css("opacity","1")
         $(".thumb").css("border-style","none")
@@ -284,27 +290,28 @@ $(".nextthumb").on("click",function (){
         $(".prevthumb").css("cursor","pointer") 
 
     }
-    else if ($(".projectwrap").css("right")=="1262px")
-    {
-        $(".projectwrap").css("right","2524px")
+    else if ($(".projectwrap").css("right")==push1)
+    {   
+        console.log($(".projectwrap").css("right"))
+        $(".projectwrap").css("right",push2)
     $(".thumb").css("opacity","0.5")
     $(".thumb3").css("opacity","1")
     $(".thumb").css("border-style","none")
     $(".thumb3").css("border-style","ridge")
         
     }
-    else if ($(".projectwrap").css("right")=="2524px")
+    else if ($(".projectwrap").css("right")==push2)
     {
-        $(".projectwrap").css("right","3790px")
+        $(".projectwrap").css("right",push3)
     $(".thumb").css("opacity","0.5")
     $(".thumb4").css("opacity","1")
     $(".thumb").css("border-style","none")
     $(".thumb4").css("border-style","ridge")
         
     }
-    else if ($(".projectwrap").css("right")=="3790px")
+    else if ($(".projectwrap").css("right")==push3)
     {
-        $(".projectwrap").css("right","5060px")
+        $(".projectwrap").css("right",push4)
     $(".thumb").css("opacity","0.5")
     $(".thumb5").css("opacity","1")
     $(".thumb").css("border-style","none")
@@ -319,9 +326,9 @@ $(".nextthumb").on("click",function (){
 
 $(".prevthumb").on("click",function (){
   
-    if($(".projectwrap").css("right")=="5060px")
+    if($(".projectwrap").css("right")==push4)
      {
-         $(".projectwrap").css("right","3790px")
+         $(".projectwrap").css("right",push3)
          $(".thumb").css("opacity","0.5")
          $(".thumb4").css("opacity","1")
          $(".thumb").css("border-style","none")
@@ -330,25 +337,25 @@ $(".prevthumb").on("click",function (){
          $(".nextthumb").css("cursor","pointer") 
 
      }
-     else if ($(".projectwrap").css("right")=="3790px")
+     else if ($(".projectwrap").css("right")==push3)
      {
-         $(".projectwrap").css("right","2524px")
+         $(".projectwrap").css("right",push2)
      $(".thumb").css("opacity","0.5")
      $(".thumb3").css("opacity","1")
      $(".thumb").css("border-style","none")
      $(".thumb3").css("border-style","ridge")
          
      }
-     else if ($(".projectwrap").css("right")=="2524px")
+     else if ($(".projectwrap").css("right")==push2)
      {
-         $(".projectwrap").css("right","1262px")
+         $(".projectwrap").css("right",push1)
      $(".thumb").css("opacity","0.5")
      $(".thumb2").css("opacity","1")
      $(".thumb").css("border-style","none")
      $(".thumb2").css("border-style","ridge")
          
      }
-     else if ($(".projectwrap").css("right")=="1262px")
+     else if ($(".projectwrap").css("right")==push1)
      {
          $(".projectwrap").css("right","0px")
      $(".thumb").css("opacity","0.5")
