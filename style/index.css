@@ -463,3 +463,12 @@ text-decoration: underline;
 }
 
 }
+
+
+
+@media screen and (max-height: 800px){
+
+.techskillsbreak{
+    display:none;
+}
+}
